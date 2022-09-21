@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.sidebar{
+    background-color: grey;
+    height:130vh;
+    font-family: 'Fira Sans', sans-serif;
+    transition: transform 0.3sec ease-in;
+
+}
+.sidebar nav{
+    padding: 45px;
+}
+.sidebar nav li{
+    list-style:none ;
+    font-size: 30px;
+    padding:33px 0;
+} 
+/*.sidebar nav li a{
+    text-decoration:none;
+    color:black;
+}*/
+.link{
+    text-decoration:none;
+    color:black;
+    position:relative;
+    padding:7px 0;
+}
+.link::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    width:0%;
+    height: 2px;
+    background:black;
+    transition:all 250ms ease-in-out;
+}
+.link::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:0%;
+    height: 2px;
+    background:black;
+    transition:all 250ms ease-in-out;
+}
+.link:hover::before, .link:hover::after{
+    width:100%;
+    left:0;
+
+}
+.main{
+   /* background-color:brown;*/
+    width: 90vw;
+}
+.container{
+    display :flex;
+}
+.infocontainer{
+   background-color:#4040a1;
+    height: 90vh;
+    width: 60vw;  
+    margin: 100px auto;
+    display:flex;
+    justify-content:space-around;
+}
+.devInfo{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 5px;
+}
+.hello{
+font-size: 3.5em;
+color:#fefbd8;
+padding: 10px;
+}
+.name{
+font-size: 3em;
+font-family: 'Fira Sans', sans-serif;
+color:#fefbd8;
+padding:10px;
+}
+.about{
+font-size: 2.5em;
+color:#fefbd8;
+padding:10px;
+}
+.more about{
+    font-size:2em;
+    font-family: 'Fira Sans', sans-serif;
+    color:#fefbd8;
+    padding:10px;
+}
+.buttons{
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+.btn{
+padding: 6px 10px;
+border-radius: 9px;
+color: white;
+background-color:blue;
+font-weight: bold;
+font-size:15px;
+margin: 0 3px;
+cursor:pointer;
+}
+.btn:hover{
+background-color: white;
+color:blue;
+}
+.btn-sm:{
+    font-size:14 px;
+    padding: 10px,19px;
+    margin:12px 0;
+}
+.devpic img{
+    width: 48vh;
+    border:2px solid black;
+}
+.contactform{
+    padding:0 34px;
+    margin:0 88px;
+    font-family: 'Fira Sans', sans-serif;
+}
+.contactform h1{
+   /* padding:12px 0;*/
+    font-family: 'Source Code Pro', monospace;
+}
+.contactform form div{
+    padding: 10px 0;
+    display:flex;
+    flex-direction:column;
+}
+.contactform form div input{
+    border-radius:5px;
+   width:26vw;
+    margin:6px 0;
+    padding:3px;
+}
+#form-check{
+    flex-direction:row;
+}
+#form-check input{
+    width: 24px;
+    margin: 3px 0;
+}
+#error_message{
+    margin-bottom:20px;
+    width:16vw;
+    padding: 0px;
+    background-color: rgba(0, 0, 255, 0.581);
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5 ease;
+}
+.intro h1{
+    font-family: 'Fira Sans', sans-serif; 
+    margin: 10px;
+}
+.intro p{
+    font-family: 'Fira Sans', sans-serif; 
+    margin:2px 15px;
+}
+.intro li{
+    margin: 2px 20px;
+}
+.skillcontainer{
+    list-style:none;
+    background-color:#333;
+    color:#fff;
+    margin:2px,15px;
+    padding:12px;
+    width:500px;
+    padding:20px;
+    box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) 
+}
+.skillcontainer h3{
+    font-size: 15px;
+}
+.skillcontainer li{
+    margin:10px 0;
+    padding:5px;
+}
+.bar{
+    background:#353b48;
+    display:block;
+    height:15px;
+    border:1px solid rgba(0,0,0,0.3);
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)
+}
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.bar span{
+    height: 20px;
+    float:left;
+    background: linear-gradient(135deg,rgba(236,0,140,1)0%, rgba(252,103,103,1)100% )    
+}
+.HTML{
+    width:40%;
+    animation: HTML 3s;
+}
+.CSS{
+    width:30%;
+    animation: CSS 3s;
+}
+.JavaScript{
+    width:30%;
+    animation: JavaScript 3s;
+}
+.Python{
+    width:20%;
+    animation: Python 3s;
+}
+.C{
+    width:60%;
+    animation: C 3s;
+}
+@keyframes HTML{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:40%;
+    }
+}
+@keyframes CSS{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:30%;
+    }
+}
+@keyframes JavaScript{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:30%;
+    }
+}
+@keyframes Python{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:20%;
+    }
+}
+@keyframes C{
+    0%{
+        width:0%;
+    }
+    100%{
+        width:60%;
+    }
+}
+.hamburger{
+    position:absolute;
+    cursor:pointer;
+    top:10px;
+    left:10px;
+}
+.ham{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.sidebarGo{
+    transform: translate(-434px,0px);
+    position:absolute;
+}
+.cross{
+    margin-left: 215px;
+    margin-top: 10px;
+}
+.intro{
+    margin:10px 88px;
+}
+@media  (max-width: 1615px) {
+    *{
+    /*background-color: red;*/
+    }
+    
+    .contactform{
+        margin-top: 60px;
+        width:60vw;
+        height:80vh;
+        color:Blue;
+    }
+    .infocontainer{
+        margin-left:60px;
+        padding-top: 20px;
+        padding-right: 15px;
+    }
+
+   /* .intro h1{
+        font-size: 15px;
+    }
+    .intro p{
+        font-size:10px;
+    }
+    .intro li{
+        font-size:10px;
+    }*/
+}  
